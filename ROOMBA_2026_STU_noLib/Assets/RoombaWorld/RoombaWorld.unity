@@ -891,6 +891,93 @@ Transform:
   - {fileID: 653363589}
   m_Father: {fileID: 1034953935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &961978726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961978728}
+  - component: {fileID: 961978727}
+  m_Layer: 0
+  m_Name: ASTAR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &961978727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961978726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AstarPathfindingProject::AstarPath
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAIIez8PFkjfAIAADsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFymzAQ/RWPzsUDGIeht5Y4Tg9JPHEzuXBZo8VoDBIjidhOxv9eSYAh7snye7urt29XfBHGVYO5FnItGX0SFMnPGbFn8mM2ko94gr3gW/aJQ8w7o7q0QeBiXkEzYfDApilRo5Ys/8X3lQ32DdhyVghZr+geU6G0MnABlUJDSaFtNjfQ14yczI+X2JSzOYWxPX2aU+LPLuaYI9coJ6GLeZTEwTIOkpXn3/VpXjy/C5NFEi0XPWpLeNHcT8I4XMbhygtCV6/leQV1g9Q2N5aNFuGgIIpcIDeN9zGWykVVMdWrJvrcOFdSaFRrejYBlIFxwUm1ppTI9qW+TX4pCoW6t0jC+Z5JY2ZXlfwWncM1qEOn7AOq1t4TOEVdyaf/WK+jCynqx+HWwLc36JLlh1c456D0ZABT+P677JYfoTrArsL3EvmzWEvRcmpILVub2ioM78e/18bSEvPDiHdSb8C2Gf0e5j1M2/Zwcb2f0orVO0vNow7YVsK57ZYEpZnLHyPYrZDqSxjUqnhT+Bf2013riQcmlTZU3yW38nailTaUrJxntptWp0JydHAvukEOlT5vTBl9O8AbbnLtDfMA9lX1l/fc8FhuUhw8xvv+DbURx+uwVCmOT6jKl1ZXjOMo2hLPxqdUcN7t19STIW3bygLySdq+ZfT7apHlLgbMgSZwly8goF4AyRIRlnRH4xwgJm73GDd9QrXphPb2mKnxsTg3ezZ8bGZrCY3bdSrhuGaftZhYznghtrlE5C/fKiiU5g7zJOmKMuPPFrVm3I2bfGWkEvkBaXaNz1yjq5OWkI3dZ6RhH0JbJCOp+7hkxMLXVd5I/GB4tHcPxS7k8g9QSwMEFAAACAgAAAgh7CtX+3dtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJpknlianJiimWiWbJxomGKrmGipWlqaqJpSlKKeXJiorlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7Pw8WSN8AgAAOwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7CtX+3dtAAAAeAAAAAkAJAAAAAAAAAAAAAAAyQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAACBAwAAAAA=
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &961978728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961978726}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.175, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1034953934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,3 +1907,4 @@ SceneRoots:
   - {fileID: 152355136}
   - {fileID: 1381552336}
   - {fileID: 1034953935}
+  - {fileID: 961978728}
