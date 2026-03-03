@@ -84,8 +84,8 @@ public class FSM_RoombaCleaning : FiniteStateMachine
         );
         State goingPoo = new State("GoingPoo",
            () => {
-                steeringContext.maxSpeed *= maxSpeed;
-                steeringContext.maxAcceleration *= maxAcceleration;
+                steeringContext.maxSpeed = normalSpeed * maxSpeed;
+                steeringContext.maxAcceleration = normalAcceleration * maxAcceleration;
                 goToTarget.enabled = true;
                 goToTarget.target = poo;
                 },
@@ -99,6 +99,9 @@ public class FSM_RoombaCleaning : FiniteStateMachine
         State cleaningPoo = new State("CleaningPoo",
             () => {
                 cleaningPooTime = 0f;
+                if (poo != null)
+                    GameObject.Destroy(poo);
+                poo = null;
                 blackboard.StartSpinning();
                 },
 
@@ -106,9 +109,8 @@ public class FSM_RoombaCleaning : FiniteStateMachine
 
             () => {
                 blackboard.StopSpinning();
-                if (dust != null)
-                    GameObject.Destroy(poo);
-                poo = null;
+                steeringContext.maxSpeed = normalSpeed;
+                steeringContext.maxAcceleration = normalAcceleration;
             }
         );
 
@@ -167,7 +169,6 @@ public class FSM_RoombaCleaning : FiniteStateMachine
 
         AddTransition(roombaPatrolling, pooDetected, goingPoo);
         AddTransition(goingDust, pooDetected, goingPoo);
-        AddTransition(goingPoo, pooDetected, goingPoo);
         AddTransition(goingPoo, pooReached, cleaningPoo);
         AddTransition(cleaningPoo, cleaningPooDone, roombaPatrolling);
         
