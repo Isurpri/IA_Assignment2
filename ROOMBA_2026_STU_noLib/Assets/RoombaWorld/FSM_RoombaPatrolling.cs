@@ -3,7 +3,7 @@ using UnityEngine;
 using Steerings;
 
 [CreateAssetMenu(fileName = "FSM_RoombaPatrolling", menuName = "Finite State Machines/FSM_RoombaPatrolling", order = 1)]
-public class FSM_Roomba : FiniteStateMachine
+public class FSM_RoombaPatrolling : FiniteStateMachine
 {
     /* Declare here, as attributes, all the variables that need to be shared among
      * states and transitions and/or set in OnEnter or used in OnExit 
