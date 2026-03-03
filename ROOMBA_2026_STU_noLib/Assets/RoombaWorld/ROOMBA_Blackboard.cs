@@ -24,7 +24,6 @@ public class ROOMBA_Blackboard : MonoBehaviour {
     private TextMesh energyLine;
     
     
-    
 	void Start () {
         energyLine = GameObject.Find("EnergyLine").GetComponent<TextMesh>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -85,4 +84,5 @@ public class ROOMBA_Blackboard : MonoBehaviour {
     
     private Color chargingColorA = new Color(0.52f, 0.808f, 0.980f, 1);
     private Color chargingColorB = new Color(0.12f, 0.478f, 0.706f, 1);
+
 }

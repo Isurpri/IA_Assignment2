@@ -225,8 +225,8 @@ GameObject:
   - component: {fileID: 111757792}
   - component: {fileID: 111757794}
   - component: {fileID: 111757796}
-  - component: {fileID: 111757795}
   - component: {fileID: 111757797}
+  - component: {fileID: 111757798}
   m_Layer: 0
   m_Name: roomba
   m_TagString: ROOMBA
@@ -412,22 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823459bfcabf59e4bbb7d30c1033e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsm: {fileID: 0}
+  fsm: {fileID: 11400000, guid: c8e68168415b4054195521e254941db1, type: 2}
   currentState: 
   textMesh: {fileID: 0}
---- !u!114 &111757795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111757782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1921e82befcb5e249b8ea882b9be3d12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GoToTarget
-  target: {fileID: 0}
 --- !u!114 &111757796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +465,19 @@ MonoBehaviour:
   bezierTangentLength: 0.4
   offset: 0.2
   factor: 0.1
+--- !u!114 &111757798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111757782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1921e82befcb5e249b8ea882b9be3d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoToTarget
+  target: {fileID: 152355135}
 --- !u!1 &117488038
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,8 +2713,8 @@ Transform:
   m_GameObject: {fileID: 850424860}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.5, y: 8.7, z: 0}
+  m_LocalScale: {x: 1.1503, y: 1.1503, z: 1.1503}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 653363589}
@@ -6229,7 +6229,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -21.336388, y: 43.308342, z: 0}
-  m_LocalScale: {x: 9, y: 9, z: 1}
+  m_LocalScale: {x: 9.9549, y: 9.9549, z: 1.1061}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1587323226}
