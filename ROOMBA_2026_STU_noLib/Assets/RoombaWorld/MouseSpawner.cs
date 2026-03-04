@@ -12,7 +12,7 @@ public class MosueSpawner : MonoBehaviour
 	void Start()
 	{
 		sample = Resources.Load<GameObject>("MOUSE");
-		interval = Random.Range(10f, 50f);
+		interval = Random.Range(20f, 30f);
 	}
 
 	// Update is called once per frame
