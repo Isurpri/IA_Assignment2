@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823459bfcabf59e4bbb7d30c1033e0ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fsm: {fileID: 0}
+  fsm: {fileID: 11400000, guid: 8a1ce8f613e3dc2469ad18ebc8f6029b, type: 2}
   currentState: 
   textMesh: {fileID: 0}
 --- !u!114 &-6025817320332240327

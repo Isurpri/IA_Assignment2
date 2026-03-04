@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &34495722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 34495723}
+  - component: {fileID: 34495724}
+  m_Layer: 0
+  m_Name: MouseSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &34495723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34495722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34495724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34495722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068d37f1fb0cb6c44ab31e838f8263ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MosueSpawner
+  interval: 5
 --- !u!1 &100750255
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +485,7 @@ MonoBehaviour:
       m_Bits: 4294967295
     useGraphRaycasting: 0
   traversableTags: -1
-  tagPenalties: 0000000040420f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  tagPenalties: 00000000e8030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
 --- !u!114 &111757797
@@ -2957,6 +3002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 875305297}
   - component: {fileID: 875305298}
+  - component: {fileID: 875305299}
   m_Layer: 0
   m_Name: DustSpawner
   m_TagString: Untagged
@@ -2992,6 +3038,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DustSpawner
   interval: 5
+--- !u!114 &875305299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875305295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500e121cde0e897408c128f72fd46aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickSpawn
 --- !u!1 &915197705
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: AstarPathfindingProject::AstarPath
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezJ4CcMfQIAADwFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMFymzAQ/RWPzsUDGIeht5Y4Tg9JPHEzuXBZo8VoDBIjidhOxv9eSYAh7snye7urt29XfBHGVYO5FnItGX0SFMnPGbFn8mM2ko94gr3gW/aJQ8w7o7q0QeBiXkEzYfDApilRo5Ys/8X3lQ32DdhyVghZr+geU6G0MnABlUJDSaFtNjfQ14yczI+X2JSzOYWxPX2aU+LPLuaYI9coJ6GLeZTEwTIOkpXn3/VpXjy/C5NFEi0XPWpLeNHcT8I4XMbhygtCV6/leQV1g9Q2N5aNFuGgIIpcIDeN9zGWykVVMdWrJvrcOFdSaFRrejYBlIFxwUm1ppTI9qW+TX4pCoW6t0jC+Z5JY2ZXlfwWncM1qEOn7AOq1t4TOEVdyaf/WK+jCynqx+HWwLc36JLlh1c456D0ZABT+P677JYfoTrArsL3EvmzWEvRcmpILVub2ioM78e/18bSEvPDiHdSb8C2Gf0e5j1M2/Zwcb2f0orVO0vNow7YVsK57ZYEpZnLHyPYrZDqZRvUqnhT+Bf2013riQcmlTZUH86tvJ1opQ0lK+eZ7abVqZAcHdyLbpBDpc8bU0bfDvCGm1x7wzyAfVX95T03PJabFAeP8b5/Q23E8TosVYrjE6rypdUV4ziKtsSz8SkVnHf7NfVkSNu2soB8krZvGf2+WmS5iwFzoAnc5QsIqBdAskSEJd3ROAeIids9xk2fUG06ob09Zmp8LM7Nng0fm9laQuN2nUo4rtlnLSaWM16IbS4R+UtX4SocpbnEvEm6oswYtEWtGXfzJl8ZqUR+QJpdC2Wu09VJS8jGKhlp2IfQFslI6r4uGbHwdZc3Ej8YHu3lQ7ELufwDUEsDBBQAAAgIAAAIIewrV/t3bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSaZJ5YmpyYoplolmycaJhiq5hoqVpamqiaUpSinlyYqK5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezJ4CcMfQIAADwFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewrV/t3bQAAAHgAAAAJACQAAAAAAAAAAAAAAMoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAggMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIewtYPCLfgIAADsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzjVjAwbcW+sQ0kMSprSTiy+LtcYabMkjyQGS4b9Xkm3suCfEe/vx9mnlT8K4qjDVQm4lo8+CIvk+IfZMvk168gkvcBR8zz6wi3ljVOc2CFzMb9BMGDywaUqUqCVLf/BjYYN9A9acZUKWG3rEWCitDJxBodBQUmibzQ30OSEX8+NFNuVqTrOVPX2YU+RPbuaYItco+9BgGs7C9WodBRvPD9ssbzGNosV8HoYLgy7bCt5yuvRXYbiarzdeMHPlap4WUFZI7Wx91cV81glYrF0gN3O3MZZKRVEw1Yom+lo5U2KoVG1GNgGUgTHBKbWe5MiOuR4nv2aZQt06JOH6wKTxsqlKforG4BLUqVH2DkVt+wROUVPy+T/Wa+hMivKp6xr4toPOWXr6DdcUlB74P4Qfvsqu+RmKExwKfMuRv4itFDWnhtSytqm1wtlD//c+WJxjeurxRuoIrKve7+66u8u2M9zc7Je4YOXBUtNFA+wL4dx2O4LS3MsvI9htkGplG9Sq+KvwDxyHq9YSj0wqbag2nFt5B1FLG0o2zjM7Ta1jITk6uBVdIYdCX3emjB5f4IgbtB0xj2AfVdu85bq3MkpxcB/v+yNqJ873y1K5OD+jyl9rXTCOvWhLvBifYsF5s19DT7q0fS0zSAdpx5rRr6tFwsMKMAUawTKdQ0C9AKIQEUJ6oKsUYEXc7jFu5oRi1wht7TG3xvvi3OxZ962ZbCVUbtephPOWfZRiYDnjmdinEpG/NhXuwlGaJuZN0g1lxqA9as24u2/ymZBCpCekyb1Q4ibdXLSEpK+SkIq9C22RhMTu45IQC993eSfxneHZNu+K3cjtH1BLAwQUAAAICAAACCHsK1f7d20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kmmSeWJqcmKKZaJZsnGiYYquYaKlaWpqomlKUop5cmKiuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsLWDwi34CAAA7BQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHsK1f7d20AAAB4AAAACQAkAAAAAAAAAAAAAADLAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAIMDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -7222,3 +7280,4 @@ SceneRoots:
   - {fileID: 1034953935}
   - {fileID: 961978728}
   - {fileID: 875305297}
+  - {fileID: 34495723}
