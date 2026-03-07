@@ -98,7 +98,7 @@ public class FSM_Mouse : FiniteStateMachine
            () => {
                 }
         );
-        State destroyingMouse = new State("DestroyingMouse",
+        State reachedExit = new State("reachedExit",
            () => {
                GameObject.Destroy(gameObject);
                 },
@@ -138,12 +138,12 @@ public class FSM_Mouse : FiniteStateMachine
 
          */ 
         
-        AddStates(goingPoint, goingExit, goingExitQuickly, destroyingMouse);
+        AddStates(goingPoint, goingExit, goingExitQuickly, reachedExit);
         AddTransition(goingPoint, locationRached, goingExit);
         AddTransition(goingPoint, roombaDetected, goingExitQuickly);
         AddTransition(goingExit, roombaDetected, goingExitQuickly);
-        AddTransition(goingExit, locationRached, destroyingMouse);
-        AddTransition(goingExitQuickly, locationRached, destroyingMouse);
+        AddTransition(goingExit, locationRached, reachedExit);
+        AddTransition(goingExitQuickly, locationRached, reachedExit);
 
 
         /* STAGE 4: set the initial state

@@ -23,6 +23,7 @@ public class DustSpawner : MonoBehaviour
 			// spawn creating an instance...
 			clone = Instantiate(sample);
 			clone.transform.position = LocationHelper.RandomWalkableLocation();
+			clone.GetComponent<SpriteRenderer>().color = Random.ColorHSV();
 			elapsedTime = 0;
 		}
 		else

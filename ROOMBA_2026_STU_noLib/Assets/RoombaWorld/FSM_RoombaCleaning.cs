@@ -14,6 +14,8 @@ public class FSM_RoombaCleaning : FiniteStateMachine
     public SteeringContext steeringContext;
     private GameObject dust;
     private GameObject poo;
+    private GameObject nearestDust;
+    private GameObject nearestPoo;
     private float maxSpeed = 2;
     private float maxAcceleration = 4;
     private float normalSpeed;
@@ -63,7 +65,15 @@ public class FSM_RoombaCleaning : FiniteStateMachine
                 goToTarget.enabled = true;
                 goToTarget.target = dust;
                 },
-            () => { }, 
+            () => { 
+                nearestDust = SensingUtils.FindInstanceWithinRadius(gameObject, "DUST", blackboard.dustDetectionRadius);
+
+                if (nearestDust != null)
+                {
+                    dust = nearestDust;
+                    goToTarget.target = dust;
+                } 
+                }, 
            
            () => {
                 goToTarget.enabled = false;
@@ -89,7 +99,15 @@ public class FSM_RoombaCleaning : FiniteStateMachine
                 goToTarget.enabled = true;
                 goToTarget.target = poo;
                 },
-            () => { }, 
+            () => {
+                nearestPoo = SensingUtils.FindInstanceWithinRadius(gameObject, "POO", blackboard.pooDetectionRadius);
+
+                if (nearestPoo != null)
+                {
+                    poo = nearestPoo;
+                    goToTarget.target = poo;
+                }
+                }, 
            
            () => {
                 goToTarget.enabled = false;
