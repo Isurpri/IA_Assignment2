@@ -5,9 +5,8 @@ public class MosueSpawner : MonoBehaviour
 {
 	private GameObject sample;
 
-	public float interval = 5f;// one seed every interval seconds
-
-	private float elapsedTime = 0f; // time elapsed since last generation
+	public float interval = 5f;
+	private float elapsedTime = 0f; 
 
 	void Start()
 	{
@@ -15,13 +14,12 @@ public class MosueSpawner : MonoBehaviour
 		interval = Random.Range(20f, 30f);
 	}
 
-	// Update is called once per frame
+	
 	void Update()
 	{
 		GameObject clone;
 		if (elapsedTime >= interval)
 		{
-			// spawn creating an instance...
 			clone = Instantiate(sample);
 			clone.transform.position = LocationHelper.RandomEntryExitPoint().transform.position;
 			elapsedTime = 0;

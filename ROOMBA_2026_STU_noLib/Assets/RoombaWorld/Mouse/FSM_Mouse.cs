@@ -50,13 +50,7 @@ public class FSM_Mouse : FiniteStateMachine
     {
         /* STAGE 1: create the states with their logic(s)
          *-----------------------------------------------
-         
-        State varName = new State("StateName",
-            () => { }, // write on enter logic inside {}
-            () => { }, // write in state logic inside {}
-            () => { }  // write on exit logic inisde {}  
-        );
-
+    
          */
         State goingPoint = new State("Going_Point",
            () => { /* COMPLETE */
@@ -112,11 +106,6 @@ public class FSM_Mouse : FiniteStateMachine
         /* STAGE 2: create the transitions with their logic(s)
          * ---------------------------------------------------
 
-        Transition varName = new Transition("TransitionName",
-            () => { }, // write the condition checkeing code in {}
-            () => { }  // write the on trigger code in {} if any. Remove line if no on trigger action needed
-        );
-
         */
          Transition locationRached = new Transition("TransitionRached",
             () => { return goToTarget.routeTerminated();}, // write the condition checkeing code in {}
@@ -131,10 +120,6 @@ public class FSM_Mouse : FiniteStateMachine
 
         /* STAGE 3: add states and transitions to the FSM 
          * ----------------------------------------------
-            
-        AddStates(...);
-
-        AddTransition(sourceState, transition, destinationState);
 
          */ 
         
@@ -147,8 +132,6 @@ public class FSM_Mouse : FiniteStateMachine
 
 
         /* STAGE 4: set the initial state
-         
-        initialState = ... 
 
          */
          

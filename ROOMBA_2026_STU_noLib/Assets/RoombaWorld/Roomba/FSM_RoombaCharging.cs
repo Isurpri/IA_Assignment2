@@ -40,12 +40,6 @@ public class FSM_RoombaCharging : FiniteStateMachine
     {
         /* STAGE 1: create the states with their logic(s)
          *-----------------------------------------------
-         
-        State varName = new State("StateName",
-            () => { }, // write on enter logic inside {}
-            () => { }, // write in state logic inside {}
-            () => { }  // write on exit logic inisde {}  
-        );
 
          */
 
@@ -53,21 +47,21 @@ public class FSM_RoombaCharging : FiniteStateMachine
         roombaCleaning.Name = "roombaCleaning";
 
         State goingChargingPoint = new State("Going_Charging_Point",
-           () => { /* COMPLETE */
+           () => { 
                 goToTarget.enabled = true;
 
                 GameObject[] stations = GameObject.FindGameObjectsWithTag("ENERGY");
                 
                 nearestChargingStation = stations[0];
-                float bestDistance = SensingUtils.DistanceToTarget(gameObject, nearestChargingStation);
+                float minDistance = SensingUtils.DistanceToTarget(gameObject, nearestChargingStation);
 
                 foreach (GameObject station in stations)
                 {
                     float distance = SensingUtils.DistanceToTarget(gameObject, station);
 
-                    if (distance < bestDistance)
+                    if (distance < minDistance)
                     {
-                        bestDistance = distance;
+                        minDistance = distance;
                         nearestChargingStation = station;
                     }
                 }
@@ -75,17 +69,17 @@ public class FSM_RoombaCharging : FiniteStateMachine
                 },
             () => { }, 
            
-           () => {/* COMPLETE */
+           () => {
                 goToTarget.enabled = false;
                 }
         );
         State recharging = new State("Recharging",
-           () => { /* COMPLETE */
+           () => {
                 blackboard.startRecharging();       
                 },
             () => { }, 
            
-           () => {/* COMPLETE */
+           () => {
                 blackboard.stopRecharging();
                 }
         );
@@ -93,11 +87,6 @@ public class FSM_RoombaCharging : FiniteStateMachine
 
         /* STAGE 2: create the transitions with their logic(s)
          * ---------------------------------------------------
-
-        Transition varName = new Transition("TransitionName",
-            () => { }, // write the condition checkeing code in {}
-            () => { }  // write the on trigger code in {} if any. Remove line if no on trigger action needed
-        );
 
         */
         Transition batteryLow = new Transition("BatteryLow",
@@ -126,10 +115,6 @@ public class FSM_RoombaCharging : FiniteStateMachine
 
         /* STAGE 3: add states and transitions to the FSM 
          * ----------------------------------------------
-            
-        AddStates(...);
-
-        AddTransition(sourceState, transition, destinationState);
 
          */ 
         AddStates(goingChargingPoint, recharging, roombaCleaning);
@@ -140,8 +125,6 @@ public class FSM_RoombaCharging : FiniteStateMachine
 
 
         /* STAGE 4: set the initial state
-         
-        initialState = ... 
 
          */
         initialState = roombaCleaning;

@@ -39,13 +39,13 @@ public class FSM_RoombaPatrolling : FiniteStateMachine
          *-----------------------------------------------
          */
         State goingPoint = new State("Going_Point",
-           () => { /* COMPLETE */
+           () => {
                 goToTarget.enabled = true;
                 goToTarget.target = LocationHelper.RandomPatrolPoint();       
                 },
             () => { }, 
            
-           () => {/* COMPLETE */
+           () => {
                 goToTarget.enabled = false;
                 }
         );
@@ -57,8 +57,8 @@ public class FSM_RoombaPatrolling : FiniteStateMachine
 
         */
         Transition locationRached = new Transition("TransitionRached",
-            () => { return goToTarget.routeTerminated();}, // write the condition checkeing code in {}
-            () => { }  // write the on trigger code in {} if any. Remove line if no on trigger action needed
+            () => { return goToTarget.routeTerminated();}, 
+            () => { }  
         );
 
 
@@ -72,8 +72,6 @@ public class FSM_RoombaPatrolling : FiniteStateMachine
 
         /* STAGE 4: set the initial state
          
-        initialState = ... 
-
          */
         initialState = goingPoint;
     }

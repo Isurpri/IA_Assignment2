@@ -135,11 +135,6 @@ public class FSM_RoombaCleaning : FiniteStateMachine
         /* STAGE 2: create the transitions with their logic(s)
          * ---------------------------------------------------
 
-        Transition varName = new Transition("TransitionName",
-            () => { }, // write the condition checkeing code in {}
-            () => { }  // write the on trigger code in {} if any. Remove line if no on trigger action needed
-        );
-
         */
         Transition dustDetected = new Transition("DustDetected",
             () => { 
@@ -177,10 +172,6 @@ public class FSM_RoombaCleaning : FiniteStateMachine
         );
         /* STAGE 3: add states and transitions to the FSM 
          * ----------------------------------------------
-            
-        AddStates(...);
-
-        AddTransition(sourceState, transition, destinationState);
 
          */ 
         AddStates(roombaPatrolling, goingDust, cleaningDust, goingPoo, cleaningPoo);
@@ -196,8 +187,6 @@ public class FSM_RoombaCleaning : FiniteStateMachine
 
         /* STAGE 4: set the initial state
          
-        initialState = ... 
-
          */
 
         initialState = roombaPatrolling;
